@@ -1,0 +1,70 @@
+   1               		.file	"delay.c"
+   2               		.arch atmega32
+   3               	__SREG__ = 0x3f
+   4               	__SP_H__ = 0x3e
+   5               	__SP_L__ = 0x3d
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  17               	.Ltext0:
+  18               	.global	delay_us
+  20               	delay_us:
+  21               	.LFB2:
+  22               	.LM1:
+  23               	/* prologue: frame size=0 */
+  24               	/* prologue end (size=0) */
+  25               	.L2:
+  26               	.LM2:
+  27 0000 0197      		sbiw r24,1
+  28               	.LM3:
+  29 0002 8230      		cpi r24,2
+  30 0004 9105      		cpc r25,__zero_reg__
+  31 0006 E0F7      		brsh .L2
+  32               	/* epilogue: frame size=0 */
+  33 0008 0895      		ret
+  34               	/* epilogue end (size=1) */
+  35               	/* function delay_us size 5 (4) */
+  36               	.LFE2:
+  38               	.global	delay_ms
+  40               	delay_ms:
+  41               	.LFB3:
+  42               	.LM4:
+  43               	/* prologue: frame size=0 */
+  44 000a CF93      		push r28
+  45 000c DF93      		push r29
+  46               	/* prologue end (size=2) */
+  47 000e EC01      		movw r28,r24
+  48               	.LM5:
+  49 0010 892B      		or r24,r25
+  50 0012 31F0      		breq .L10
+  51               	.L8:
+  52               	.LM6:
+  53 0014 84EF      		ldi r24,lo8(500)
+  54 0016 91E0      		ldi r25,hi8(500)
+  55 0018 0E94 0000 		call delay_us
+  56               	.LM7:
+  57 001c 2197      		sbiw r28,1
+  58 001e D1F7      		brne .L8
+  59               	.L10:
+  60               	/* epilogue: frame size=0 */
+  61 0020 DF91      		pop r29
+  62 0022 CF91      		pop r28
+  63 0024 0895      		ret
+  64               	/* epilogue end (size=3) */
+  65               	/* function delay_ms size 15 (10) */
+  66               	.LFE3:
+  68               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 delay.c
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cceIaaaa.s:3      *ABS*:0000003f __SREG__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cceIaaaa.s:4      *ABS*:0000003e __SP_H__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cceIaaaa.s:5      *ABS*:0000003d __SP_L__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cceIaaaa.s:6      *ABS*:00000000 __tmp_reg__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cceIaaaa.s:7      *ABS*:00000001 __zero_reg__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cceIaaaa.s:20     .text:00000000 delay_us
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cceIaaaa.s:40     .text:0000000a delay_ms
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

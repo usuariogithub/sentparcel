@@ -1,0 +1,438 @@
+Archive member included because of file (symbol)
+
+C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_copy_data.o)
+                              SCCB.o (__do_copy_data)
+C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_clear_bss.o)
+                              SCCB.o (__do_clear_bss)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+LOAD SCCB.o
+LOAD ov7660.o
+LOAD int.o
+LOAD main.o
+LOAD C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5\libm.a
+LOAD C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a
+LOAD C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5\libc.a
+LOAD C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x145e
+ *(.vectors)
+ .vectors       0x00000000       0x54 C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000054      0x280 ov7660.o
+                0x00000054                change_reg
+ .progmem.data  0x000002d4      0x5f0 int.o
+                0x000002d4                english
+                0x000008c4                . = ALIGN (0x2)
+ *(.init0)
+ *(.init1)
+ *(.init2)
+ .init2         0x000008c4        0xc C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+ *(.init3)
+ *(.init4)
+ .init4         0x000008d0       0x16 C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_copy_data.o)
+                0x000008d0                __do_copy_data
+ .init4         0x000008e6       0x10 C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_clear_bss.o)
+                0x000008e6                __do_clear_bss
+ *(.init5)
+ *(.init6)
+ *(.init7)
+ *(.init8)
+ *(.init9)
+ .init9         0x000008f6        0x4 C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+ *(.text)
+ .text          0x000008fa        0x4 C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+                0x000008fa                __vector_12
+                0x000008fa                __bad_interrupt
+                0x000008fa                __vector_6
+                0x000008fa                __vector_3
+                0x000008fa                __vector_11
+                0x000008fa                __vector_13
+                0x000008fa                __vector_17
+                0x000008fa                __vector_19
+                0x000008fa                __vector_7
+                0x000008fa                __vector_5
+                0x000008fa                __vector_4
+                0x000008fa                __vector_9
+                0x000008fa                __vector_2
+                0x000008fa                __vector_15
+                0x000008fa                __vector_8
+                0x000008fa                __vector_14
+                0x000008fa                __vector_10
+                0x000008fa                __vector_16
+                0x000008fa                __vector_18
+                0x000008fa                __vector_20
+ .text          0x000008fe      0x152 SCCB.o
+                0x00000956                noAck
+                0x00000a0e                SCCBreadByte
+                0x000008fe                InitSCCB
+                0x00000980                SCCBwriteByte
+                0x00000936                stopSCCB
+                0x0000090c                startSCCB
+ .text          0x00000a50      0x234 ov7660.o
+                0x00000aa6                rdOV7660Reg
+                0x00000b18                OV7660_config_window
+                0x00000a54                wrOV7660Reg
+                0x00000a50                CLK_init
+                0x00000c1a                OV7660_init
+ .text          0x00000c84      0x746 int.o
+                0x0000130c                __vector_1
+                0x00000d06                LCD_Clear
+                0x00000cf0                LCD_WR_REG
+                0x000011bc                Test
+                0x00000cb8                LCD_WR_DATA16
+                0x000012fa                Init_INT0
+                0x00001058                LCD_write_english
+                0x000010c0                LCD_SetCursor
+                0x00000c84                delay_us
+                0x00000d94                LCD_Init
+                0x00000c90                delay_ms
+                0x000010e2                Lcd_SetBox
+                0x00000cd4                LCD_WR_REG16
+                0x0000115e                LCD_write_english_string
+ .text          0x000013ca       0x94 main.o
+                0x000013ca                main
+                0x0000145e                . = ALIGN (0x2)
+ *(.text.*)
+                0x0000145e                . = ALIGN (0x2)
+ *(.fini9)
+ *(.fini8)
+ *(.fini7)
+ *(.fini6)
+ *(.fini5)
+ *(.fini4)
+ *(.fini3)
+ *(.fini2)
+ *(.fini1)
+ *(.fini0)
+                0x0000145e                _etext = .
+
+.data           0x00800060       0x62 load address 0x0000145e
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060       0x61 main.o
+ *(.gnu.linkonce.d*)
+                0x008000c2                . = ALIGN (0x2)
+ *fill*         0x008000c1        0x1 00
+                0x008000c2                _edata = .
+                0x008000c2                PROVIDE (__data_end, .)
+
+.bss            0x008000c2        0x0
+                0x008000c2                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(COMMON)
+                0x008000c2                PROVIDE (__bss_end, .)
+                0x0000145e                __data_load_start = LOADADDR (.data)
+                0x000014c0                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008000c2        0x0
+                0x008000c2                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008000c2                PROVIDE (__noinit_end, .)
+                0x008000c2                _end = .
+                0x008000c2                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.stab           0x00000000      0x36c
+ *(.stab)
+ .stab          0x00000000      0x36c C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+
+.stabstr        0x00000000       0x84
+ *(.stabstr)
+ .stabstr       0x00000000       0x84 C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x50
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x14 SCCB.o
+ .debug_aranges
+                0x00000014       0x14 ov7660.o
+ .debug_aranges
+                0x00000028       0x14 int.o
+ .debug_aranges
+                0x0000003c       0x14 main.o
+
+.debug_pubnames
+                0x00000000      0x1f8
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x67 SCCB.o
+ .debug_pubnames
+                0x00000067       0x77 ov7660.o
+ .debug_pubnames
+                0x000000de       0xff int.o
+ .debug_pubnames
+                0x000001dd       0x1b main.o
+
+.debug_info     0x00000000      0x8f1
+ *(.debug_info)
+ .debug_info    0x00000000      0x129 SCCB.o
+ .debug_info    0x00000129      0x2bd ov7660.o
+ .debug_info    0x000003e6      0x451 int.o
+ .debug_info    0x00000837       0xba main.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x30d
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x9c SCCB.o
+ .debug_abbrev  0x0000009c      0x106 ov7660.o
+ .debug_abbrev  0x000001a2      0x12a int.o
+ .debug_abbrev  0x000002cc       0x41 main.o
+
+.debug_line     0x00000000      0xae0
+ *(.debug_line)
+ .debug_line    0x00000000      0x210 SCCB.o
+ .debug_line    0x00000210      0x24f ov7660.o
+ .debug_line    0x0000045f      0x52c int.o
+ .debug_line    0x0000098b      0x155 main.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x00000000      0x2f6
+ *(.debug_str)
+ .debug_str     0x00000000       0xd4 SCCB.o
+                                0x108 (size before relaxing)
+ .debug_str     0x000000d4      0x12b ov7660.o
+                                0x1c2 (size before relaxing)
+ .debug_str     0x000001ff       0xeb int.o
+                                0x219 (size before relaxing)
+ .debug_str     0x000002ea        0xc main.o
+                                0x103 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(main.elf elf32-avr)
+
+Cross Reference Table
+
+Symbol                                            File
+CLK_init                                          ov7660.o
+                                                  main.o
+InitSCCB                                          SCCB.o
+                                                  ov7660.o
+Init_INT0                                         int.o
+                                                  main.o
+LCD_Clear                                         int.o
+                                                  main.o
+LCD_Init                                          int.o
+                                                  main.o
+LCD_SetCursor                                     int.o
+LCD_WR_DATA16                                     int.o
+LCD_WR_REG                                        int.o
+LCD_WR_REG16                                      int.o
+LCD_write_english                                 int.o
+LCD_write_english_string                          int.o
+                                                  main.o
+Lcd_SetBox                                        int.o
+OV7660_config_window                              ov7660.o
+OV7660_init                                       ov7660.o
+                                                  main.o
+SCCBreadByte                                      SCCB.o
+                                                  ov7660.o
+SCCBwriteByte                                     SCCB.o
+                                                  ov7660.o
+Test                                              int.o
+__bad_interrupt                                   C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__bss_end                                         C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_copy_data.o)
+__data_load_start                                 C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_copy_data.o)
+__data_start                                      C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_copy_data.o)
+__do_clear_bss                                    C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_clear_bss.o)
+                                                  main.o
+                                                  int.o
+                                                  ov7660.o
+                                                  SCCB.o
+__do_copy_data                                    C:/Program Files/WinAVR/lib/gcc/avr/3.4.6/avr5\libgcc.a(_copy_data.o)
+                                                  main.o
+                                                  int.o
+                                                  ov7660.o
+                                                  SCCB.o
+__heap_end                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__init                                            C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__stack                                           C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+                                                  main.o
+__vector_1                                        int.o
+                                                  C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_10                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_11                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_12                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_13                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_14                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_15                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_16                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_17                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_18                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_19                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_2                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_20                                       C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_3                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_4                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_5                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_6                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_7                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_8                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_9                                        C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vector_default                                  C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+__vectors                                         C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+change_reg                                        ov7660.o
+delay_ms                                          int.o
+                                                  main.o
+                                                  ov7660.o
+delay_us                                          int.o
+                                                  ov7660.o
+                                                  SCCB.o
+english                                           int.o
+main                                              main.o
+                                                  C:/Program Files/WinAVR/bin/../lib/gcc/avr/3.4.6/../../../../avr/lib/avr5/crtm32.o
+noAck                                             SCCB.o
+                                                  ov7660.o
+rdOV7660Reg                                       ov7660.o
+startSCCB                                         SCCB.o
+                                                  ov7660.o
+stopSCCB                                          SCCB.o
+                                                  ov7660.o
+wrOV7660Reg                                       ov7660.o
