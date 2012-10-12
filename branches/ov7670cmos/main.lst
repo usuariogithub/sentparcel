@@ -1,0 +1,152 @@
+   1               		.file	"main.c"
+   2               		.arch atmega32
+   3               	__SREG__ = 0x3f
+   4               	__SP_H__ = 0x3e
+   5               	__SP_L__ = 0x3d
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  17               	.Ltext0:
+  18               		.data
+  19               	.LC0:
+  20 0000 4775 616E 		.string	"Guanfu_Wang  2009-08-26"
+  20      6675 5F57 
+  20      616E 6720 
+  20      2032 3030 
+  20      392D 3038 
+  21               	.LC1:
+  22 0018 4174 6D65 		.string	"Atmega32 & ILI9325 FOR OV7660 REV2.0"
+  22      6761 3332 
+  22      2026 2049 
+  22      4C49 3933 
+  22      3235 2046 
+  23               	.LC2:
+  24 003d 4F56 3736 		.string	"OV7660 Init......"
+  24      3630 2049 
+  24      6E69 742E 
+  24      2E2E 2E2E 
+  24      2E00 
+  25               	.LC3:
+  26 004f 4F56 3736 		.string	"OV7660 Init  0K  "
+  26      3630 2049 
+  26      6E69 7420 
+  26      2030 4B20 
+  26      2000 
+  27               		.text
+  28               	.global	main
+  30               	main:
+  31               	.LFB2:
+  32               	.LM1:
+  33               	/* prologue: frame size=0 */
+  34 0000 C0E0      		ldi r28,lo8(__stack - 0)
+  35 0002 D0E0      		ldi r29,hi8(__stack - 0)
+  36 0004 DEBF      		out __SP_H__,r29
+  37 0006 CDBF      		out __SP_L__,r28
+  38               	/* prologue end (size=4) */
+  39               	.LM2:
+  40 0008 B89A      		sbi 55-0x20,0
+  41               	.LM3:
+  42 000a 8F9A      		sbi 49-0x20,7
+  43               	.LM4:
+  44 000c 8D9A      		sbi 49-0x20,5
+  45               	.LM5:
+  46 000e C098      		cbi 56-0x20,0
+  47               	.LM6:
+  48 0010 979A      		sbi 50-0x20,7
+  49               	.LM7:
+  50 0012 0E94 0000 		call CLK_init
+  51               	.LM8:
+  52 0016 8FEF      		ldi r24,lo8(-1)
+  53 0018 8ABB      		out 58-0x20,r24
+  54               	.LM9:
+  55 001a 0E94 0000 		call LCD_Init
+  56               	.LM10:
+  57 001e 00E0      		ldi r16,lo8(-2048)
+  58 0020 18EF      		ldi r17,hi8(-2048)
+  59 0022 20E0      		ldi r18,lo8(0)
+  60 0024 30E0      		ldi r19,hi8(0)
+  61 0026 40E0      		ldi r20,lo8(.LC0)
+  62 0028 50E0      		ldi r21,hi8(.LC0)
+  63 002a 6CE3      		ldi r22,lo8(60)
+  64 002c 84E1      		ldi r24,lo8(20)
+  65 002e 90E0      		ldi r25,hi8(20)
+  66 0030 0E94 0000 		call LCD_write_english_string
+  67               	.LM11:
+  68 0034 20E0      		ldi r18,lo8(0)
+  69 0036 30E0      		ldi r19,hi8(0)
+  70 0038 40E0      		ldi r20,lo8(.LC1)
+  71 003a 50E0      		ldi r21,hi8(.LC1)
+  72 003c 6CE4      		ldi r22,lo8(76)
+  73 003e 84E1      		ldi r24,lo8(20)
+  74 0040 90E0      		ldi r25,hi8(20)
+  75 0042 0E94 0000 		call LCD_write_english_string
+  76               	.LM12:
+  77 0046 80E1      		ldi r24,lo8(10000)
+  78 0048 97E2      		ldi r25,hi8(10000)
+  79 004a 0E94 0000 		call delay_ms
+  80               	.LM13:
+  81 004e 20E0      		ldi r18,lo8(0)
+  82 0050 30E0      		ldi r19,hi8(0)
+  83 0052 40E0      		ldi r20,lo8(.LC2)
+  84 0054 50E0      		ldi r21,hi8(.LC2)
+  85 0056 60E6      		ldi r22,lo8(96)
+  86 0058 84E1      		ldi r24,lo8(20)
+  87 005a 90E0      		ldi r25,hi8(20)
+  88 005c 0E94 0000 		call LCD_write_english_string
+  89               	.L2:
+  90               	.LM14:
+  91 0060 0E94 0000 		call OV7660_init
+  92 0064 8130      		cpi r24,lo8(1)
+  93 0066 E1F7      		brne .L2
+  94               	.LM15:
+  95 0068 00E0      		ldi r16,lo8(-2048)
+  96 006a 18EF      		ldi r17,hi8(-2048)
+  97 006c 20E0      		ldi r18,lo8(0)
+  98 006e 30E0      		ldi r19,hi8(0)
+  99 0070 40E0      		ldi r20,lo8(.LC3)
+ 100 0072 50E0      		ldi r21,hi8(.LC3)
+ 101 0074 60E6      		ldi r22,lo8(96)
+ 102 0076 84E1      		ldi r24,lo8(20)
+ 103 0078 90E0      		ldi r25,hi8(20)
+ 104 007a 0E94 0000 		call LCD_write_english_string
+ 105               	.LM16:
+ 106 007e 80E1      		ldi r24,lo8(10000)
+ 107 0080 97E2      		ldi r25,hi8(10000)
+ 108 0082 0E94 0000 		call delay_ms
+ 109               	.LM17:
+ 110 0086 C801      		movw r24,r16
+ 111 0088 0E94 0000 		call LCD_Clear
+ 112               	.LM18:
+ 113 008c 1ABA      		out 58-0x20,__zero_reg__
+ 114               	.LM19:
+ 115 008e 0E94 0000 		call Init_INT0
+ 116               	.L5:
+ 117               	.LM20:
+ 118 0092 FFCF      		rjmp .L5
+ 119               	/* epilogue: frame size=0 */
+ 120               	/* epilogue: noreturn */
+ 121               	/* epilogue end (size=0) */
+ 122               	/* function main size 74 (70) */
+ 123               	.LFE2:
+ 125               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccMBdaaa.s:3      *ABS*:0000003f __SREG__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccMBdaaa.s:4      *ABS*:0000003e __SP_H__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccMBdaaa.s:5      *ABS*:0000003d __SP_L__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccMBdaaa.s:6      *ABS*:00000000 __tmp_reg__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccMBdaaa.s:7      *ABS*:00000001 __zero_reg__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccMBdaaa.s:30     .text:00000000 main
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
+__stack
+CLK_init
+LCD_Init
+LCD_write_english_string
+delay_ms
+OV7660_init
+LCD_Clear
+Init_INT0

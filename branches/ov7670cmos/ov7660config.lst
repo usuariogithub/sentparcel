@@ -1,0 +1,75 @@
+   1               		.file	"ov7660config.c"
+   2               		.arch atmega32
+   3               	__SREG__ = 0x3f
+   4               	__SP_H__ = 0x3e
+   5               	__SP_L__ = 0x3d
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.global __do_copy_data
+   9               		.global __do_clear_bss
+  17               	.Ltext0:
+  18               	.global	change_reg
+  19               		.section	.progmem.data,"a",@progbits
+  22               	change_reg:
+  23 0000 00        		.byte	0
+  24 0001 00        		.byte	0
+  25 0002 01        		.byte	1
+  26 0003 00        		.byte	0
+  27 0004 02        		.byte	2
+  28 0005 00        		.byte	0
+  29 0006 03        		.byte	3
+  30 0007 00        		.byte	0
+  31 0008 04        		.byte	4
+  32 0009 00        		.byte	0
+  33 000a 09        		.byte	9
+  34 000b 03        		.byte	3
+  35 000c 10        		.byte	16
+  36 000d 40        		.byte	64
+  37 000e 0C        		.byte	12
+  38 000f 04        		.byte	4
+  39 0010 0F        		.byte	15
+  40 0011 CB        		.byte	-53
+  41 0012 11        		.byte	17
+  42 0013 FF        		.byte	-1
+  43 0014 12        		.byte	18
+  44 0015 14        		.byte	20
+  45 0016 13        		.byte	19
+  46 0017 8F        		.byte	-113
+  47 0018 14        		.byte	20
+  48 0019 2A        		.byte	42
+  49 001a 15        		.byte	21
+  50 001b 31        		.byte	49
+  51 001c 24        		.byte	36
+  52 001d 90        		.byte	-112
+  53 001e 25        		.byte	37
+  54 001f 75        		.byte	117
+  55 0020 37        		.byte	55
+  56 0021 00        		.byte	0
+  57 0022 3D        		.byte	61
+  58 0023 00        		.byte	0
+  59 0024 40        		.byte	64
+  60 0025 D0        		.byte	-48
+  61 0026 69        		.byte	105
+  62 0027 50        		.byte	80
+  63 0028 27        		.byte	39
+  64 0029 85        		.byte	-123
+  65 002a 28        		.byte	40
+  66 002b E0        		.byte	-32
+  67 002c 41        		.byte	65
+  68 002d 20        		.byte	32
+  69 002e 20        		.byte	32
+  70 002f FF        		.byte	-1
+  71               		.text
+  72               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 ov7660config.c
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccEBdaaa.s:3      *ABS*:0000003f __SREG__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccEBdaaa.s:4      *ABS*:0000003e __SP_H__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccEBdaaa.s:5      *ABS*:0000003d __SP_L__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccEBdaaa.s:6      *ABS*:00000000 __tmp_reg__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccEBdaaa.s:7      *ABS*:00000001 __zero_reg__
+C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/ccEBdaaa.s:22     .progmem.data:00000000 change_reg
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
