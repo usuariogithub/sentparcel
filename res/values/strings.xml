@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">SentParcel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="Hello">Hello</string>
+    <string name="Notice">You have a parcel!</string>
+    <string name="UserInfor">Parcel:#2743CE2\nNumber:18640082028\nFrom:lg\nTo:SIA</string>
+    <string name="usdrname">username</string>
+    <string name="NumberInput">Phone number</string>
+    <string name="Fly">V=30km/h\nH=20m\nX=27.43E\nY=56.29N\nR=74.8rad/s</string>
+
+</resources>

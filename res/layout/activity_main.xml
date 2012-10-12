@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/UserInfor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/UserInfor"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/usdrname"
+        android:src="@drawable/ic_username" />
+
+    <TextView
+        android:id="@+id/Fly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/UserInfor"
+        android:layout_below="@+id/UserInfor"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/Fly"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/PhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/Username"
+        android:ems="10"
+        android:hint="@string/NumberInput"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/Notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Username"
+        android:layout_alignLeft="@+id/PhoneNumber"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/Notice"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
